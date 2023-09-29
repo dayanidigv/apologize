@@ -13574,8 +13574,15 @@ z"/>
   direction: 'alternate',
   loop: false
 });
-      fetch('https://api.telegram.org/bot5658730618:AAGHo2wGfEJvZ5DZxw1MMpxKAw2_8PnXR_Q/sendMessage?chat_id=1221832086&text=Apologize Viewed')
+      const urlParams = new URLSearchParams(window.location.search);
+const type = urlParams.get("letter") || false;
+if (type == "foramishathangam"){
+	fetch('https://api.telegram.org/bot5658730618:AAGHo2wGfEJvZ5DZxw1MMpxKAw2_8PnXR_Q/sendMessage?chat_id=1221832086&text=Akka View Apologize Letter')
 
+}else{
+fetch('https://api.telegram.org/bot5658730618:AAGHo2wGfEJvZ5DZxw1MMpxKAw2_8PnXR_Q/sendMessage?chat_id=1221832086&text=Apologize Viewed')
+	
+}
     </script>
 </body>
 
