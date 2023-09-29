@@ -22,6 +22,9 @@
 </head>
 
 <body>
+	<audio id="notificationSound">
+    <source src="thangam.mp3" type="audio/mp3">
+	</audio>
     <div class="container">
 
         <div class="row">
@@ -13574,11 +13577,16 @@ z"/>
   direction: 'alternate',
   loop: false
 });
+function playNotificationSound() {
+    const notificationSound = document.getElementById("notificationSound");
+    notificationSound.play();
+}
+
       const urlParams = new URLSearchParams(window.location.search);
 const type = urlParams.get("letter") || false;
 if (type == "foramishathangam"){
 	fetch('https://api.telegram.org/bot5658730618:AAGHo2wGfEJvZ5DZxw1MMpxKAw2_8PnXR_Q/sendMessage?chat_id=1221832086&text=Akka View Apologize Letter')
-
+playNotificationSound() ;
 }else{
 fetch('https://api.telegram.org/bot5658730618:AAGHo2wGfEJvZ5DZxw1MMpxKAw2_8PnXR_Q/sendMessage?chat_id=1221832086&text=Apologize Viewed')
 	
